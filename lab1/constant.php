@@ -1,6 +1,6 @@
 <?php
 // ЗАДАНИЕ 1
-define('MY_CONSTANT', 'Это моя константа');
+define('CONSTANT', 'Константа');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -14,10 +14,10 @@ define('MY_CONSTANT', 'Это моя константа');
 	<h1>Константы</h1>
 	<?php
 	// ЗАДАНИЕ 2
-	if (defined('MY_CONSTANT')) {
-	    echo 'Константа MY_CONSTANT существует: ' . MY_CONSTANT . '<br>';
+	if (defined('CONSTANT')) {
+	    echo 'Константа CONSTANT существует: ' . CONSTANT . '<br>';
 	} else {
-	    echo 'Константа MY_CONSTANT не существует.<br>';
+	    echo 'Константа CONSTANT не существует.<br>';
 	}
 	
 	// ЗАДАНИЕ 3
