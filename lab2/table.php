@@ -1,14 +1,6 @@
 <?php
 declare(strict_types=1);
-/**
- * Генерирует HTML-таблицу умножения с заданным количеством строк, столбцов и цветом фона заголовков.
- *
- * @param int    $cols  Количество столбцов (по умолчанию 10)
- * @param int    $rows  Количество строк (по умолчанию 10)
- * @param string $color Цвет фона для заголовков (по умолчанию 'yellow')
- *
- * @return int Количество вызовов функции (статический счётчик)
- */
+
 function getTable(int $cols = 10, int $rows = 10, string $color = 'yellow'): int
 {
     static $count = 0;
