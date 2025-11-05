@@ -4,6 +4,7 @@ declare(strict_types=1);
 // Получаем список всех загруженных расширений
 $extensions = get_loaded_extensions();
 
+$totalFunctions = 0;
 // Начало HTML-документа
 echo "<!DOCTYPE html>\n<html lang=\"ru\">\n<head>\n";
 echo "<meta charset=\"UTF-8\">\n<title>Функции загруженных модулей PHP</title>\n";
@@ -19,6 +20,9 @@ foreach ($extensions as $ext) {
     if ($funcs === false) {
         echo "<p>Нет функций или модуль не предоставляет информацию.</p>\n";
     } else {
+         $count = count($funcs);
+        $totalFunctions += $count;
+        echo "<p>Всего функций: {$count}</p>\n";
         echo "<ul>\n";
         foreach ($funcs as $func) {
             echo "<li>" . htmlspecialchars($func) . "</li>\n";
@@ -27,5 +31,8 @@ foreach ($extensions as $ext) {
     }
 }
 
+echo "<hr>\n";
+echo "<p><strong>Общее количество функций: {$totalFunctions}</strong></p>\n";
 echo "</body>\n</html>";
+
 ?>
